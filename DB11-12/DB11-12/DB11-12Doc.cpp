@@ -1,16 +1,16 @@
 
-// MFCApplication1Doc.cpp : CMFCApplication1Doc 类的实现
+// DB11-12Doc.cpp : CDB1112Doc 类的实现
 //
 
 #include "stdafx.h"
 // SHARED_HANDLERS 可以在实现预览、缩略图和搜索筛选器句柄的
 // ATL 项目中进行定义，并允许与该项目共享文档代码。
 #ifndef SHARED_HANDLERS
-#include "MFCApplication1.h"
+#include "DB11-12.h"
 #endif
 
-#include "MFCApplication1Set.h"
-#include "MFCApplication1Doc.h"
+#include "DB11-12Set.h"
+#include "DB11-12Doc.h"
 
 #include <propkey.h>
 
@@ -18,27 +18,27 @@
 #define new DEBUG_NEW
 #endif
 
-// CMFCApplication1Doc
+// CDB1112Doc
 
-IMPLEMENT_DYNCREATE(CMFCApplication1Doc, CDocument)
+IMPLEMENT_DYNCREATE(CDB1112Doc, CDocument)
 
-BEGIN_MESSAGE_MAP(CMFCApplication1Doc, CDocument)
+BEGIN_MESSAGE_MAP(CDB1112Doc, CDocument)
 END_MESSAGE_MAP()
 
 
-// CMFCApplication1Doc 构造/析构
+// CDB1112Doc 构造/析构
 
-CMFCApplication1Doc::CMFCApplication1Doc()
+CDB1112Doc::CDB1112Doc()
 {
 	// TODO: 在此添加一次性构造代码
 
 }
 
-CMFCApplication1Doc::~CMFCApplication1Doc()
+CDB1112Doc::~CDB1112Doc()
 {
 }
 
-BOOL CMFCApplication1Doc::OnNewDocument()
+BOOL CDB1112Doc::OnNewDocument()
 {
 	if (!CDocument::OnNewDocument())
 		return FALSE;
@@ -54,7 +54,7 @@ BOOL CMFCApplication1Doc::OnNewDocument()
 #ifdef SHARED_HANDLERS
 
 // 缩略图的支持
-void CMFCApplication1Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
+void CDB1112Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 {
 	// 修改此代码以绘制文档数据
 	dc.FillSolidRect(lprcBounds, RGB(255, 255, 255));
@@ -75,7 +75,7 @@ void CMFCApplication1Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 }
 
 // 搜索处理程序的支持
-void CMFCApplication1Doc::InitializeSearchContent()
+void CDB1112Doc::InitializeSearchContent()
 {
 	CString strSearchContent;
 	// 从文档数据设置搜索内容。
@@ -85,7 +85,7 @@ void CMFCApplication1Doc::InitializeSearchContent()
 	SetSearchContent(strSearchContent);
 }
 
-void CMFCApplication1Doc::SetSearchContent(const CString& value)
+void CDB1112Doc::SetSearchContent(const CString& value)
 {
 	if (value.IsEmpty())
 	{
@@ -105,19 +105,19 @@ void CMFCApplication1Doc::SetSearchContent(const CString& value)
 
 #endif // SHARED_HANDLERS
 
-// CMFCApplication1Doc 诊断
+// CDB1112Doc 诊断
 
 #ifdef _DEBUG
-void CMFCApplication1Doc::AssertValid() const
+void CDB1112Doc::AssertValid() const
 {
 	CDocument::AssertValid();
 }
 
-void CMFCApplication1Doc::Dump(CDumpContext& dc) const
+void CDB1112Doc::Dump(CDumpContext& dc) const
 {
 	CDocument::Dump(dc);
 }
 #endif //_DEBUG
 
 
-// CMFCApplication1Doc 命令
+// CDB1112Doc 命令

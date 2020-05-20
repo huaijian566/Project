@@ -52,7 +52,7 @@ BEGIN
     "\r\n"
     "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
     "LANGUAGE 4, 2\r\n"
-    "#include ""res\\MFCApplication1.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""res\\DB1112.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
     "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
     "#include ""l.CHS\\afxdb.rc""        // 数据库资源\r\n"
     "#endif\r\n"
@@ -69,9 +69,9 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_MAINFRAME           ICON                    "res\\MFCApplication1.ico"
+IDR_MAINFRAME           ICON                    "res\\DB11-12.ico"
 
-IDR_MFCApplication1TYPE ICON                    "res\\MFCApplication1Doc.ico"
+IDR_DB1112TYPE          ICON                    "res\\DB11-12Doc.ico"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -137,7 +137,7 @@ BEGIN
     END
     POPUP "帮助(&H)"
     BEGIN
-        MENUITEM "关于 MFCApplication1(&A)...",   ID_APP_ABOUT
+        MENUITEM "关于 DB11-12(&A)...",           ID_APP_ABOUT
     END
 END
 
@@ -169,43 +169,23 @@ END
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "关于 MFCApplication1"
+CAPTION "关于 DB11-12"
 FONT 9, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
-    LTEXT           "MFCApplication1，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "DB11-12，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
     LTEXT           "Copyright (C) 2020",IDC_STATIC,42,26,114,8
     DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
 END
 
-IDD_MFCAPPLICATION1_FORM DIALOGEX 0, 0, 320, 200
+IDD_DB1112_FORM DIALOGEX 0, 0, 320, 200
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
 FONT 9, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    EDITTEXT        IDC_EDIT1,19,51,56,14,ES_AUTOHSCROLL | ES_READONLY
-    PUSHBUTTON      "删除",IDC_BUTTON1,154,27,50,14
-    PUSHBUTTON      "增加",IDC_BUTTON2,155,64,50,14
-    PUSHBUTTON      "修改",IDC_BUTTON3,155,103,50,14
-END
-
-IDD_DIALOG1 DIALOGEX 0, 0, 310, 177
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Dialog"
-FONT 8, "MS Shell Dlg", 400, 0, 0x1
-BEGIN
-    DEFPUSHBUTTON   "确定",IDOK,199,156,50,14
-    PUSHBUTTON      "取消",IDCANCEL,253,156,50,14
-    EDITTEXT        IDC_EDIT1,41,53,54,14,ES_AUTOHSCROLL
-END
-
-IDD_DIALOG2 DIALOGEX 0, 0, 310, 177
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Dialog"
-FONT 8, "MS Shell Dlg", 400, 0, 0x1
-BEGIN
-    DEFPUSHBUTTON   "确定",IDOK,199,156,50,14
-    PUSHBUTTON      "取消",IDCANCEL,253,156,50,14
-    EDITTEXT        IDC_EDIT1,37,50,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT1,31,31,55,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,33,57,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "显示图片",IDC_BUTTON1,102,148,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,122,20,182,121
 END
 
 
@@ -232,11 +212,11 @@ BEGIN
         BLOCK "080404B0"
         BEGIN
             VALUE "CompanyName", "TODO: <公司名>"
-            VALUE "FileDescription", "MFCApplication1"
+            VALUE "FileDescription", "DB11-12"
             VALUE "FileVersion", "1.0.0.1"
-            VALUE "InternalName", "MFCApplication1.exe"
+            VALUE "InternalName", "DB11-12.exe"
             VALUE "LegalCopyright", "TODO:  (C) <公司名>。  保留所有权利。"
-            VALUE "OriginalFilename", "MFCApplication1.exe"
+            VALUE "OriginalFilename", "DB11-12.exe"
             VALUE "ProductName", "TODO: <产品名>"
             VALUE "ProductVersion", "1.0.0.1"
         END
@@ -264,28 +244,12 @@ BEGIN
         BOTTOMMARGIN, 55
     END
 
-    IDD_MFCAPPLICATION1_FORM, DIALOG
+    IDD_DB1112_FORM, DIALOG
     BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 313
         TOPMARGIN, 7
         BOTTOMMARGIN, 193
-    END
-
-    IDD_DIALOG1, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 303
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 170
-    END
-
-    IDD_DIALOG2, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 303
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 170
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -296,17 +260,7 @@ END
 // AFX_DIALOG_LAYOUT
 //
 
-IDD_MFCAPPLICATION1_FORM AFX_DIALOG_LAYOUT
-BEGIN
-    0
-END
-
-IDD_DIALOG1 AFX_DIALOG_LAYOUT
-BEGIN
-    0
-END
-
-IDD_DIALOG2 AFX_DIALOG_LAYOUT
+IDD_DB1112_FORM AFX_DIALOG_LAYOUT
 BEGIN
     0
 END
@@ -325,12 +279,12 @@ END
 
 STRINGTABLE
 BEGIN
-    IDR_MAINFRAME           "MFCApplication1\n\nMFCApplication1\n\n\nMFCApplication1.Document\nMFCApplication1.Document"
+    IDR_MAINFRAME           "DB11-12\n\nDB11-12\n\n\nDB1112.Document\nDB11-12.Document"
 END
 
 STRINGTABLE
 BEGIN
-    AFX_IDS_APP_TITLE       "MFCApplication1"
+    AFX_IDS_APP_TITLE       "DB11-12"
     AFX_IDS_IDLEMESSAGE     "就绪"
 END
 
@@ -449,7 +403,7 @@ END
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE 4, 2
-#include "res\MFCApplication1.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "res\DB1112.rc2"  // 非 Microsoft Visual C++ 编辑的资源
 #include "l.CHS\afxres.rc"      // 标准组件
 #include "l.CHS\afxdb.rc"        // 数据库资源
 #endif

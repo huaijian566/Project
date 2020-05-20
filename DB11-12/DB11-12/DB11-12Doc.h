@@ -1,21 +1,21 @@
 
-// MFCApplication1Doc.h : CMFCApplication1Doc 类的接口
+// DB11-12Doc.h : CDB1112Doc 类的接口
 //
 
 
 #pragma once
-#include "MFCApplication1Set.h"
+#include "DB11-12Set.h"
 
 
-class CMFCApplication1Doc : public CDocument
+class CDB1112Doc : public CDocument
 {
 protected: // 仅从序列化创建
-	CMFCApplication1Doc();
-	DECLARE_DYNCREATE(CMFCApplication1Doc)
+	CDB1112Doc();
+	DECLARE_DYNCREATE(CDB1112Doc)
 
 // 特性
 public:
-	CMFCApplication1Set m_MFCApplication1Set;
+	CDB1112Set m_DB1112Set;
 
 // 操作
 public:
@@ -30,7 +30,7 @@ public:
 
 // 实现
 public:
-	virtual ~CMFCApplication1Doc();
+	virtual ~CDB1112Doc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

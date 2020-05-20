@@ -3,7 +3,7 @@
 //
 
 #include "stdafx.h"
-#include "MFCApplication1.h"
+#include "DB11-12.h"
 
 #include "MainFrm.h"
 

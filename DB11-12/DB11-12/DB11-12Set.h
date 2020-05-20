@@ -1,17 +1,17 @@
 
-// MFCApplication1Set.h: CMFCApplication1Set 类的接口
+// DB11-12Set.h: CDB1112Set 类的接口
 //
 
 
 #pragma once
 
-// 代码生成在 2020年5月19日, 19:51
+// 代码生成在 2020年5月12日, 19:51
 
-class CMFCApplication1Set : public CRecordset
+class CDB1112Set : public CRecordset
 {
 public:
-	CMFCApplication1Set(CDatabase* pDatabase = NULL);
-	DECLARE_DYNAMIC(CMFCApplication1Set)
+	CDB1112Set(CDatabase* pDatabase = NULL);
+	DECLARE_DYNAMIC(CDB1112Set)
 
 // 字段/参数数据
 
@@ -24,7 +24,9 @@ public:
 // 以同时支持 Unicode 和这些转换)。
 
 	long	m_ID;
-	long	m_1;
+	CStringW	m_1;
+	double	m_2;
+	CStringW	m_3;
 
 // 重写
 	// 向导生成的虚函数重写

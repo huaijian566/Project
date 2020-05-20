@@ -1,32 +1,32 @@
 
-// MFCApplication1.cpp : 定义应用程序的类行为。
+// DB11-12.cpp : 定义应用程序的类行为。
 //
 
 #include "stdafx.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
-#include "MFCApplication1.h"
+#include "DB11-12.h"
 #include "MainFrm.h"
 
-#include "MFCApplication1Set.h"
-#include "MFCApplication1Doc.h"
-#include "MFCApplication1View.h"
+#include "DB11-12Set.h"
+#include "DB11-12Doc.h"
+#include "DB11-12View.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CMFCApplication1App
+// CDB1112App
 
-BEGIN_MESSAGE_MAP(CMFCApplication1App, CWinApp)
-	ON_COMMAND(ID_APP_ABOUT, &CMFCApplication1App::OnAppAbout)
+BEGIN_MESSAGE_MAP(CDB1112App, CWinApp)
+	ON_COMMAND(ID_APP_ABOUT, &CDB1112App::OnAppAbout)
 END_MESSAGE_MAP()
 
 
-// CMFCApplication1App 构造
+// CDB1112App 构造
 
-CMFCApplication1App::CMFCApplication1App()
+CDB1112App::CDB1112App()
 {
 	// 支持重新启动管理器
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
@@ -39,20 +39,20 @@ CMFCApplication1App::CMFCApplication1App()
 
 	// TODO: 将以下应用程序 ID 字符串替换为唯一的 ID 字符串；建议的字符串格式
 	//为 CompanyName.ProductName.SubProduct.VersionInformation
-	SetAppID(_T("MFCApplication1.AppID.NoVersion"));
+	SetAppID(_T("DB11-12.AppID.NoVersion"));
 
 	// TODO: 在此处添加构造代码，
 	// 将所有重要的初始化放置在 InitInstance 中
 }
 
-// 唯一的一个 CMFCApplication1App 对象
+// 唯一的一个 CDB1112App 对象
 
-CMFCApplication1App theApp;
+CDB1112App theApp;
 
 
-// CMFCApplication1App 初始化
+// CDB1112App 初始化
 
-BOOL CMFCApplication1App::InitInstance()
+BOOL CDB1112App::InitInstance()
 {
 	// 如果一个运行在 Windows XP 上的应用程序清单指定要
 	// 使用 ComCtl32.dll 版本 6 或更高版本来启用可视化方式，
@@ -97,9 +97,9 @@ BOOL CMFCApplication1App::InitInstance()
 	CSingleDocTemplate* pDocTemplate;
 	pDocTemplate = new CSingleDocTemplate(
 		IDR_MAINFRAME,
-		RUNTIME_CLASS(CMFCApplication1Doc),
+		RUNTIME_CLASS(CDB1112Doc),
 		RUNTIME_CLASS(CMainFrame),       // 主 SDI 框架窗口
-		RUNTIME_CLASS(CMFCApplication1View));
+		RUNTIME_CLASS(CDB1112View));
 	if (!pDocTemplate)
 		return FALSE;
 	AddDocTemplate(pDocTemplate);
@@ -122,7 +122,7 @@ BOOL CMFCApplication1App::InitInstance()
 	return TRUE;
 }
 
-int CMFCApplication1App::ExitInstance()
+int CDB1112App::ExitInstance()
 {
 	//TODO: 处理可能已添加的附加资源
 	AfxOleTerm(FALSE);
@@ -130,7 +130,7 @@ int CMFCApplication1App::ExitInstance()
 	return CWinApp::ExitInstance();
 }
 
-// CMFCApplication1App 消息处理程序
+// CDB1112App 消息处理程序
 
 
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
@@ -166,13 +166,13 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 // 用于运行对话框的应用程序命令
-void CMFCApplication1App::OnAppAbout()
+void CDB1112App::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
 
-// CMFCApplication1App 消息处理程序
+// CDB1112App 消息处理程序
 
 
 

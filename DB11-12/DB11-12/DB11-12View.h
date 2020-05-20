@@ -1,30 +1,31 @@
 
-// MFCApplication1View.h : CMFCApplication1View 类的接口
+// DB11-12View.h : CDB1112View 类的接口
 //
 
 #pragma once
 
-class CMFCApplication1Set;
+class CDB1112Set;
 
-class CMFCApplication1View : public CRecordView
+class CDB1112View : public CRecordView
 {
 protected: // 仅从序列化创建
-	CMFCApplication1View();
-	DECLARE_DYNCREATE(CMFCApplication1View)
+	CDB1112View();
+	DECLARE_DYNCREATE(CDB1112View)
 
 public:
 #ifdef AFX_DESIGN_TIME
-	enum{ IDD = IDD_MFCAPPLICATION1_FORM };
+	enum{ IDD = IDD_DB1112_FORM };
 #endif
-	CMFCApplication1Set* m_pSet;
+	CDB1112Set* m_pSet;
 
 // 特性
 public:
-	CMFCApplication1Doc* GetDocument() const;
-
+	CDB1112Doc* GetDocument() const;
+	void draw_pic(CString file);
 // 操作
 public:
-
+	bool a;
+	CString s;
 // 重写
 public:
 	virtual CRecordset* OnGetRecordset();
@@ -35,7 +36,7 @@ protected:
 
 // 实现
 public:
-	virtual ~CMFCApplication1View();
+	virtual ~CDB1112View();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -47,14 +48,17 @@ protected:
 protected:
 	DECLARE_MESSAGE_MAP()
 public:
+	CString name;
 	CString number;
+	afx_msg void OnRecordFirst();
+	afx_msg void OnRecordPrev();
+	afx_msg void OnRecordNext();
+	afx_msg void OnRecordLast();
 	afx_msg void OnBnClickedButton1();
-	afx_msg void OnBnClickedButton2();
-	afx_msg void OnBnClickedButton3();
 };
 
-#ifndef _DEBUG  // MFCApplication1View.cpp 中的调试版本
-inline CMFCApplication1Doc* CMFCApplication1View::GetDocument() const
-   { return reinterpret_cast<CMFCApplication1Doc*>(m_pDocument); }
+#ifndef _DEBUG  // DB11-12View.cpp 中的调试版本
+inline CDB1112Doc* CDB1112View::GetDocument() const
+   { return reinterpret_cast<CDB1112Doc*>(m_pDocument); }
 #endif
 
